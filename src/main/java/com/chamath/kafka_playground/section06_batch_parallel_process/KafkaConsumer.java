@@ -37,7 +37,7 @@ public class KafkaConsumer {
                 .commitInterval(Duration.ofSeconds(1))
                 .subscription(Pattern.compile("section6-topic"));
 
-        //BATCH PROCESS-sequential
+        // -------------FOR BATCH PROCESS-sequential-------------
 
         //receive events as batches and auto acknowledge the batches that already received
         KafkaReceiver.create(options)
@@ -47,7 +47,7 @@ public class KafkaConsumer {
                 .subscribe();
 
 
-        /* -------- FOR PARALLEL PROCESS ---------
+        /* ---------------- FOR PARALLEL PROCESS -------------------
 
 
         KafkaReceiver.create(options)
